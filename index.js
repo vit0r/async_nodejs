@@ -1,6 +1,5 @@
 var async = require('async');
 var GithubApi = require('github');
-var _ = require('lodash');
 
 var github = new GithubApi({ version: '3.0.0' });
 
