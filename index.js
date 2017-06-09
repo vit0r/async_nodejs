@@ -24,7 +24,7 @@ async.series([
             callback(null, res.data);
         });
     },
-    function watson(callback) {
+    function anderson(callback) {
         github.search.users({ q: 'andersonCiandT' }, function (err, res) {
             if (err) {
                 callback(err, null);
