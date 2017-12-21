@@ -60,3 +60,32 @@ async.each(userNames, function (userName, callback) {
     }
     console.log(gits);
 });
+
+//AUTO
+
+async.auto({
+    get_user: function(callback) {
+        github.search.users({ q: 'vit0r' }, function (err, data) {
+            if (err) {
+                //call done err
+                callback(err, null);
+                return;
+            }
+            callback(null, data);
+        });
+    },
+    get_user_repo: ['get_user', function(data, callback) {
+        var login = data.get_user.data.items[0].login;
+        github.search.repos({ q: login }, function (err, data) {
+            if (err) {
+                //call done err
+                callback(err, null);
+                return;
+            }
+            callback(null, data);
+        });
+    }]    
+}, function(err, data) {
+    //call done
+    console.log('data = ', data.get_user_repo.data.items);
+});

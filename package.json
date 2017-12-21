@@ -1,0 +1,25 @@
+{
+    "name": "async_nodejs",
+    "version": "1.0.0",
+    "description": "usando async",
+    "main": "index.js",
+    "dependencies": {
+      "async": "^2.6.0",
+      "github": "^13.0.1"
+    },
+    "devDependencies": {},
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/vit0r/async_nodejs.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/vit0r/async_nodejs/issues"
+    },
+    "homepage": "https://github.com/vit0r/async_nodejs#readme"
+  }
+  
